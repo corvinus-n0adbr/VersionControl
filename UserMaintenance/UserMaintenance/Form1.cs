@@ -17,23 +17,32 @@ namespace UserMaintenance
         public Form1()
         {
             InitializeComponent();
-            label1.Text = Resource.LastName;
-            label2.Text = Resource.FirstName;
+            label1.Text = Resource.FullName;
+            button2.Text = Resource.Write;
             button1.Text = Resource.Add;
             
             listBox1.DataSource = users;
             listBox1.ValueMember = "ID";
             listBox1.DisplayMember = "FullName";
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             var u = new User()
             {
-                LastName = textBox1.Text,
-                FirstName = textBox2.Text
+                FullName = textBox1.Text,
+                
             };
             users.Add(u);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.InitialDirectory = @"C:\Users\Szabolcs\Desktop\egyetem\Programok\IRF\Repo\UserMaintenance\UserMaintenance\bin\Debug";
+            sfd.RestoreDirectory = true;
+
         }
     }
 }
