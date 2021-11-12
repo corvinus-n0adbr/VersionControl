@@ -6,14 +6,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace gyak08_n0adbr.Entities
 {
-    public class BallFactory : IToyFactory
+    class Car : Toy
     {
-        public Color BallColor { get; set; }
-        public Toy CreateNew()
+        protected override void DrawImage(Graphics g)
         {
-            return new Ball(BallColor);
+            Image imageFile = Image.FromFile("Images/car.png");
+            g.DrawImage(imageFile, new Rectangle(0, 0, Width, Height));
         }
     }
 }
