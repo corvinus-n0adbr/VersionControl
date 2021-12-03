@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace gyak9_n0adbr.Entities
 {
-    class DeathProbability
+    public class DeathProbability
     {
         public Gender Gender { get; set; }
         public int Age { get; set; }

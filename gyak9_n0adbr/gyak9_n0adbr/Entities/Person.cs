@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace gyak9_n0adbr.Entities
 {
-    class Person
-    {
+     public class Person
+     { 
         public int BirthYear { get; set; }
         public Gender Gender { get; set; }
         public int NbrOfChildren { get; set; }
@@ -17,5 +17,5 @@ namespace gyak9_n0adbr.Entities
         {
             IsAlive = true;
         }
-    }
+     }
 }
